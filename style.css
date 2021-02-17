@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    --primary-color-1:hsl(179,62%,43%);
+    --primary-color-2:hsl(71,73%,54%);
+    --secondary-color-1:hsl(204,43%,83%);
+    --secondary-color-2:hsl(218,22%,67%);
+}
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size:16px;
+    font-family: 'Karla', sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+     padding: 2em 1em;
+        background-color: var(--secondary-color-2); 
+}
+.row{
+    width:80%;
+    max-width:1650px;
+    margin: 0 auto;
+    padding:0 1em;
+ 
+    /* border: 2px solid red; */
+}
+.community__intro{
+  background-color: white;
+  padding:1em ;
+  margin-top: 1em;
+  border-radius:4px 4px 0 0;
+}
+
+.community__intro h1{
+    color:var(--primary-color-1);
+    font-size:0.9rem;
+    font-weight: 700;
+}
+.community__intro h2{
+    color:hsl(71,73%,50%);
+    font-size:0.8rem;
+    font-weight: 700;
+    margin: 1em 0;
+}
+.community__intro p{
+    color:var(--secondary-color-2);
+    font-size:0.7rem;
+    line-height: 1.5;
+}
+
+/* subsription styling */
+.subscription__details{
+  background-color:var(--primary-color-1);
+  padding:1em;
+  border-bottom: 1px solid var(--secondary-color-2);
+  border-radius:0 0 0 4px;
+}
+.subscription__details h2{
+    font-size:0.8rem;
+    font-weight: 700;
+    color:white;
+}
+.subscription__details p{
+    color:white;
+    font-size:0.7rem;
+    line-height: 1.6;
+}
+.subscription__details .per__month{
+  margin: 1em 0;
+  color:var(--secondary-color-1);
+}
+.subscription__details p:not(.per__month){
+    margin-bottom: 2em;
+}
+ .per__month span{
+     font-size:1.2rem;
+     font-weight: 700;
+     margin-right: 0.2em;
+     vertical-align: middle;
+     color:white;
+ }
+ .sign__up{
+     background-color: var(--primary-color-2);
+     color:white;
+     outline:none;
+     border:none;
+     display:block;
+     width:100%;
+     margin:0 auto;
+     font-size: 0.7rem;
+     padding:1em 0;
+     border-radius: 4px;
+ }
+ /* benefits details */
+
+ .benefits__details{
+   background-color:hsl(179,40%,60%);
+   padding:1em;
+   color:white;
+   margin-bottom: 1em;
+   border-radius: 0 0 4px 0;
+}
+ .benefits__details h2{
+  font-size:0.8rem;
+  padding-left: 0.5em;  
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+ .benefits__details li{
+     font-size:0.6rem;
+      padding-left: 0.5em; 
+        color:var(--secondary-color-1);
+ }
+  .benefits__details li + li{
+      margin-top: 0.5em;
+}
+/*footer section */
+footer{
+    padding:1em;
+}
+footer p{
+    font-size:0.7rem;
+}
+
+/*media queries */
+@media screen and (min-width:567px){
+    .community__intro h1{
+     font-size:1.1rem;
+     }
+    .subscription__details{
+        border-top: 0;
+    }
+    .community__intro h2,
+    .subscription__details h2,
+    .benefits__details h2{
+        font-size:0.9rem;
+    }
+    .community__intro p,
+    .subscription__details p,
+    .benefits__details li,
+    footer p{
+        font-size: 0.8rem;
+    }
+    .sign__up{
+        font-size:0.9rem;
+    }
+}
+@media screen and (min-width:768px){
+    .row{
+        padding:0 2rem;
+    }
+    .community__intro h1{
+     font-size:1.3rem;
+     }
+    .community__intro h2,
+    .subscription__details h2,
+    .benefits__details h2{
+        font-size:1.1rem;
+    }
+    .community__intro p,
+    .subscription__details p,
+    .benefits__details li,
+    footer p{
+        font-size: 1rem;
+    }
+    .subscribe__benefits{
+        display:flex;
+    }
+    .subscription__details,
+    .benefits__details{
+        flex-grow: 1;
+        padding:2em;
+    }
+    .subscription__details .per__month{
+        margin: 0.5em 0 0 0 ;
+    }
+    .sign__up{
+       margin: 4em auto 0 auto;
+       font-size:1.1rem;
+    }
+    .benefits__details{
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width:900px){
+    .community__intro h1{
+     font-size:1.5rem;
+     }
+    .community__intro h2,
+    .subscription__details h2,
+    .benefits__details h2,
+    .sign__up{
+        font-size:1.3rem;
+        transition: all 0.5ms ease-in-out;
+    }
+    .sign__up:hover{
+        background-color: white;
+        color:var(--primary-color-2);
+    }
+    .community__intro p,
+    .subscription__details p,
+    .benefits__details li,
+    footer p{
+        font-size: 1.1rem;
+    }
+    
+}
